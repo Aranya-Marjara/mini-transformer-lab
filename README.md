@@ -1,26 +1,50 @@
-# mini-transformer-lab
+# 🧠 mini-transformer-lab  
+*A compact transformer-based language model built from scratch in pure PyTorch.*
 
-A compact transformer-based language model built from scratch in pure PyTorch — designed for learning, tinkering, and really understanding how LLMs work under the hood.
+> "LLMs aren’t magic. They’re just math — and I wanted to build one myself."
 
-> 🔬 **Built with curiosity, debugged with persistence**
-> 
-> Almost every error and bug in this project was debugged (sometimes painfully) with a bit of help from AI tools — and yeah, my brain had its fair share of contributions too in debugging, coding, and the whole idea. Because honestly, what else would you expect from a self-taught Python programmer building their own LLM?
+---
 
-## 🎯 What's Inside
-mini-transformer-lab/
-├── 🧠 mini_llm.py # Main model & training script
-├── 📚 example_data/ # Sample texts to train on
-├── 🎛️ checkpoints/ # Saved model weights
-└── 🔬 experiments/ # Training logs & results
+![Transformer Header](https://github.com/Aranya-Marjara/mini-transformer-lab/assets/your-gif-id-here/transformer-banner.gif)
 
-## 🚀 Quick Start
+<p align="center">
+  <a href="https://github.com/Aranya-Marjara/mini-transformer-lab/stargazers">
+    <img src="https://img.shields.io/github/stars/Aranya-Marjara/mini-transformer-lab?color=gold" />
+  </a>
+  <a href="https://github.com/Aranya-Marjara/mini-transformer-lab/forks">
+    <img src="https://img.shields.io/github/forks/Aranya-Marjara/mini-transformer-lab?color=lightblue" />
+  </a>
+  <img src="https://img.shields.io/badge/Python-3.10+-blue?logo=python" />
+  <img src="https://img.shields.io/badge/PyTorch-red?logo=pytorch" />
+  <img src="https://img.shields.io/badge/License-GPLv3-green.svg" />
+</p>
 
-### Installation
+---
+
+## 🚀 What is This?
+
+`mini-transformer-lab` is a **from-scratch Transformer model**, written in **pure PyTorch**, built to learn how real LLMs like GPT work under the hood — token by token, layer by layer.
+
+Every tensor operation is transparent.  
+Every gradient is visible.  
+And every bug taught me more than any tutorial could.
+
+---
+
+## 🧩 Features
+
+- 🧠 Self-Attention (multi-head, causal masking)
+- 🔡 Character-level tokenizer
+- 💾 Checkpoint saving & resuming
+- 🎛️ Configurable hyperparameters (context length, layers, heads, etc.)
+- 🪄 Top-k / Top-p sampling for creative text
+- 💬 Command-line interface (train + generate)
+
+---
+
+## ⚙️ Installation
 
 ```bash
-# Clone this repository
 git clone https://github.com/Aranya-Marjara/mini-transformer-lab.git
 cd mini-transformer-lab
-
-# Install dependencies (just PyTorch!)
-pip install torch
+pip install torch tqdm
