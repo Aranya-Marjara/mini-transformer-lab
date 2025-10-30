@@ -72,24 +72,18 @@ python3 mini-transformer-lab.py generate --checkpoint checkpoint_epoch_5.pt --pr
 ```
 
 
-### Troubleshooting
-```
+Troubleshooting
+
 "Data too short for context length"
-
 Use smaller context: --context_length 64 --batch_size 8
+Or get more data or use the sample text above.
 
-Get more data or use the example above
-
-Checkpoint not found
-
+"Checkpoint not found"
 Use actual checkpoint names: checkpoint_epoch_5.pt, checkpoint_epoch_10.pt
 
-First outputs are gibberish
-
-This is normal! Train for more epochs (20-50) for better results
-
-Use larger datasets for more coherent text
-```
+"First outputs are gibberish"
+This is normal for early training!
+Train for more epochs (20–50) or use a larger dataset for more coherent text.
 
 
 ## Transformer Architecture
