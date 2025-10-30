@@ -23,15 +23,24 @@ A compact transformer-based language model built from scratch in pure PyTorch �
 git clone https://github.com/Aranya-Marjara/mini-transformer-lab.git
 cd mini-transformer-lab
 
-# Install dependencies (just PyTorch!)
-pip install torch (installing in a virtual environtment is highly recommended)
+# Install dependencies (just PyTorch!)(installing in a virtual environtment is highly recommended)
+pip install torch 
 ```
-## Create a file
+## Create a file 
 ```
-nano my_data.txt
+nano your_text.txt
 ```
 
-## Paste something You want to train, Here is an example:
+###  Data Requirements
+
+Your training file should be large enough for the context length:
+- **Minimum size**: `(batch_size × context_length + 1)` characters
+- **Example**: For batch_size=32, context_length=256 → need ~8,200+ characters
+- **Small data?** Use: `--context_length 64 --batch_size 8`
+
+
+## Paste something You want to train. (Your data should be large enough for the context length!)
+## Here is an example , Use with the smaller context length.
 ```
 Artificial intelligence has changed the world of technology forever. From simple rule-based systems to advanced large language models, AI continues to evolve with astonishing speed. The transformer architecture revolutionized the way machines understand language, allowing them to capture long-range dependencies and contextual meaning with ease.
 
@@ -46,15 +55,48 @@ This text exists to provide enough data for your mini-transformer-lab model to t
 
 
 ## Basic Usage
-#  Train a new model on your text
+#  Train a new model on your text (Use smaller context length (Recommended))
 ```
-python3 mini-transformer-lab.py train --data your_text.txt --epochs 10
+python3 mini-transformer-lab.py train --data your_text.txt --epochs 10 --context_length 64 --batch_size 8
 ```
 
 # Generate some text
 ```
-python3 mini-transformer-lab.py generate --checkpoint checkpoint.pt --prompt "The future of AI is"
+python3 mini-transformer-lab.py generate --checkpoint checkpoint_epoch_10.pt --prompt "The future of AI is"
 ```
+
+### 🧪 Quick Test
+```bash
+# Create a tiny test file
+echo "Hello world! This is a test." > test.txt
+
+# Train quickly
+python3 mini-transformer-lab.py train --data test.txt --epochs 5 --context_length 16 --batch_size 2
+
+# Generate
+python3 mini-transformer-lab.py generate --checkpoint checkpoint_epoch_5.pt --prompt "Hello"
+```
+
+
+Troubleshooting
+"Data too short for context length"
+
+Use smaller context: --context_length 64 --batch_size 8
+
+Get more data or use the example above
+
+Checkpoint not found
+
+Use actual checkpoint names: checkpoint_epoch_5.pt, checkpoint_epoch_10.pt
+
+First outputs are gibberish
+
+This is normal! Train for more epochs (20-50) for better results
+
+Use larger datasets for more coherent text
+
+
+
 
 ## Transformer Architecture
 
