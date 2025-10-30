@@ -1,9 +1,0 @@
-Input Tokens
-   │
-   ├──► Token Embedding
-   ├──► Positional Encoding (learned or sinusoidal)
-   ├──► [TransformerBlock × N]
-   │       ├── Multi-Head Attention
-   │       └── Feed Forward Network
-   │
-   └──► Linear Head → Next Token Probabilities
