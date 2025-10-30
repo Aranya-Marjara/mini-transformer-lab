@@ -6,12 +6,6 @@ A compact transformer-based language model built from scratch in pure PyTorch �
 > 
 > Almost every error and bug in this project was debugged (sometimes painfully) with a bit of help from AI tools — and yeah, my brain had its fair share of contributions too in debugging, coding, and the whole idea. Because honestly, what else would you expect from a self-taught Python programmer building their own LLM?
 
-## 🎯 What's Inside
-
-- 🧠 **mini-transformer-lab.py** — Main model & training script  
-- 📚 **example_data/** — Sample texts to train on  
-- 🎛️ **checkpoints/** — Saved model weights  
-- 🔬 **experiments/** — Training logs & results
 
 
 ## 🚀 Quick Start
@@ -39,7 +33,7 @@ Your training file should be large enough for the context length:
 - **Small data?** Use: `--context_length 64 --batch_size 8`
 
 
-## Paste something You want to train. (Your data should be large enough for the context length!)
+## Paste something you want to train on. (Your data should be large enough for the context length!)
 ## Here is an example , Use with the smaller context length.
 ```
 Artificial intelligence has changed the world of technology forever. From simple rule-based systems to advanced large language models, AI continues to evolve with astonishing speed. The transformer architecture revolutionized the way machines understand language, allowing them to capture long-range dependencies and contextual meaning with ease.
@@ -54,7 +48,7 @@ This text exists to provide enough data for your mini-transformer-lab model to t
 ```
 
 
-## Basic Usage
+### Basic Usage
 #  Train a new model on your text (Use smaller context length (Recommended))
 ```
 python3 mini-transformer-lab.py train --data your_text.txt --epochs 10 --context_length 64 --batch_size 8
@@ -65,7 +59,7 @@ python3 mini-transformer-lab.py train --data your_text.txt --epochs 10 --context
 python3 mini-transformer-lab.py generate --checkpoint checkpoint_epoch_10.pt --prompt "The future of AI is"
 ```
 
-### 🧪 Quick Test
+### Quick Test
 ```bash
 # Create a tiny test file
 echo "Hello world! This is a test." > test.txt
@@ -78,7 +72,8 @@ python3 mini-transformer-lab.py generate --checkpoint checkpoint_epoch_5.pt --pr
 ```
 
 
-Troubleshooting
+### Troubleshooting
+```
 "Data too short for context length"
 
 Use smaller context: --context_length 64 --batch_size 8
@@ -94,8 +89,7 @@ First outputs are gibberish
 This is normal! Train for more epochs (20-50) for better results
 
 Use larger datasets for more coherent text
-
-
+```
 
 
 ## Transformer Architecture
