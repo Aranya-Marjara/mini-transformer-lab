@@ -31,7 +31,7 @@ pip install torch (installing in a virtual environtment is highly recommended)
 nano my_data.txt
 ```
 
-## Paste something You want to train here is an example:
+## Paste something You want to train, Here is an example:
 ```
 Artificial intelligence has changed the world of technology forever. From simple rule-based systems to advanced large language models, AI continues to evolve with astonishing speed. The transformer architecture revolutionized the way machines understand language, allowing them to capture long-range dependencies and contextual meaning with ease.
 
@@ -46,11 +46,15 @@ This text exists to provide enough data for your mini-transformer-lab model to t
 
 
 ## Basic Usage
-# 🏋️ Train a new model on your text
+#  Train a new model on your text
+```
 python3 mini-transformer-lab.py train --data your_text.txt --epochs 10
+```
 
-# 🎲 Generate some text
+# Generate some text
+```
 python3 mini-transformer-lab.py generate --checkpoint checkpoint.pt --prompt "The future of AI is"
+```
 
 ## Transformer Architecture
 
