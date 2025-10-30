@@ -27,7 +27,9 @@ cd mini-transformer-lab
 pip install torch (installing in a virtual environtment is highly recommended)
 ```
 ## Create a file
+```
 nano my_data.txt
+```
 
 ## Paste something You want to train here is an example:
 ```
